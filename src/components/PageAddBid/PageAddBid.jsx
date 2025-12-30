@@ -61,35 +61,37 @@ const PageAddBid = () => {
 	};
 
 	return (
-		<div className="white-plate white-plate--payment">
-			<div className="container-fluid">
-				{!isLoading && <h1>Loading...</h1>}
+		<div className="with-nav radial-bg flex-center add-form">
+			<div className="white-plate white-plate--payment">
+				<div className="container-fluid">
+					{!isLoading && <h1>Loading...</h1>}
 
-				{courses && (
-					<AppContext.Provider
-						value={{
-							courses,
-							name,
-							setName,
-							phone,
-							setPhone,
-							mail,
-							setMail,
-							course,
-							setCourse,
-							addBid,
-							isSending,
-						}}
-					>
-						{isLoading && (
-							<>
-								<PageAddBidHeader />
-								<FormAddBid />
-							</>
-						)}
-						{error && <p>{error}</p>}
-					</AppContext.Provider>
-				)}
+					{courses && (
+						<AppContext.Provider
+							value={{
+								courses,
+								name,
+								setName,
+								phone,
+								setPhone,
+								mail,
+								setMail,
+								course,
+								setCourse,
+								addBid,
+								isSending,
+							}}
+						>
+							{isLoading && (
+								<>
+									<PageAddBidHeader />
+									<FormAddBid />
+								</>
+							)}
+							{error && <p>{error}</p>}
+						</AppContext.Provider>
+					)}
+				</div>
 			</div>
 		</div>
 	);
