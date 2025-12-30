@@ -1,6 +1,58 @@
 {
-  "posts": [
-    { "id": 1, "title": "'a title'", "views": 100 },
-    { "id": 2, "title": "'another title'", "views": 200 }
+  "courses": [
+    {
+      "id": 1,
+      "title": "Курс по верстке",
+      "value": "course-html"
+    },
+    {
+      "id": 2,
+      "title": "Курс по JavaScript",
+      "value": "course-js"
+    },
+    {
+      "id": 3,
+      "title": "Курс по VUE JS",
+      "value": "course-vue"
+    },
+    {
+      "id": 4,
+      "title": "Курс по PHP",
+      "value": "course-php"
+    },
+    {
+      "id": 5,
+      "title": "Курс по WordPress",
+      "value": "course-wordpress"
+    }
+  ],
+  "bids": [
+    {
+      "id": 1767047573337.609,
+      "date": "30.12.2025",
+      "course": "course-php",
+      "name": "Иван",
+      "mail": "gdddgfdg@mail.ru",
+      "phone": "+78945624568",
+      "status": "new"
+    },
+    {
+      "id": 1767051253480.9963,
+      "date": "30.12.2025",
+      "course": "course-wordpress",
+      "name": "Владимир",
+      "mail": "fddfdfdf@yandex.ru",
+      "phone": "+74596854245",
+      "status": "new"
+    },
+    {
+      "id": 1767052853436.4783,
+      "date": "30.12.2025",
+      "course": "course-js",
+      "name": "Олег",
+      "mail": "hz@gmail.com",
+      "phone": "+7977778856",
+      "status": "new"
+    }
   ]
 }
