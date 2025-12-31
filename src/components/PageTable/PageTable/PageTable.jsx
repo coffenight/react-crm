@@ -21,7 +21,6 @@ const PageTable = () => {
 	return (
 		<div className="with-nav body--dashboard">
 			<AppContext.Provider value={{ status, setStatus, bids }}>
-				{bids && console.log(bids)}
 				<LeftPanel />
 				<Table />
 			</AppContext.Provider>

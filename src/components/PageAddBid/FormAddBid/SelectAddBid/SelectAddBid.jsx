@@ -1,11 +1,12 @@
 import { useContext } from 'react';
 import { AppContext } from '../../PageAddBid';
+import { course as coursesList} from '../../../../helpers/variables.js';
 
 const SelectAddBid = () => {
-	const { courses, course, setCourse } = useContext(AppContext);
+	const { course, setCourse } = useContext(AppContext);
 
 	const htmlOption = () => {
-		return courses.map((cours) => {
+		return coursesList.map((cours) => {
 			return (
 				<option key={cours.id} value={cours.value}>
 					{cours.title}
@@ -21,10 +22,10 @@ const SelectAddBid = () => {
 				id="product"
 				name="product"
 				className="form-control"
-				value={course}
+				value={course ? course : undefined}
 				onChange={(e) => setCourse(e.target.value)}
 			>
-				{courses && htmlOption()}
+				{htmlOption()}
 			</select>
 		</div>
 	);
