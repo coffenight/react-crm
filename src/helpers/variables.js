@@ -1,4 +1,4 @@
-const serverPath = 'http://localhost:3000';
+const serverPath = 'https://crm-server-sa9k.onrender.com';
 
 const status = [
 	{ id: 1, title: 'Все', titleOne: 'Все', value: 'all' },
