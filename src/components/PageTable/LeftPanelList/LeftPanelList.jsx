@@ -3,21 +3,34 @@ import { useContext } from 'react';
 import { AppContext } from '../PageTable/PageTable';
 
 const LeftPanelList = () => {
-	const { status, setStatus } = useContext(AppContext);
+	const { status, setStatus, bids } = useContext(AppContext);
+
+
+	const count = () => {
+		return bids.reduce((sum, item) => {
+			if(item.status === 'new') {
+				return sum + 1
+			}
+			return sum
+		}, 0);
+	};
+
 
 	const html = bidStatus.map((item) => {
 		return (
 			<li key={item.id}
-			onClick={()=>{setStatus(item.value);}}>
+			    onClick={() => {
+				    setStatus(item.value);
+			    }}>
 				<a
 					data-value={item.value}
 					data-role="left-status"
-					className={`${item.value === status ? 'active' : ''}`}
+					className={`left-status ${item.value === status ? 'active' : ''}`}
 				>
 					{item.title}
-					<div className="badge" id="badge-new">
-						12
-					</div>
+					{item.value === 'new' && <div className="badge" id="badge-new">
+						{count()}
+					</div>}
 				</a>
 			</li>
 		);

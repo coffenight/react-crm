@@ -1,67 +1,48 @@
+import { useContext } from 'react';
+import { AppContext } from '../PageTable/PageTable.jsx';
+import TableBodyHeader from '../TableBodyHeader/TableBodyHeader.jsx';
+import TableBodyItems from '../TableBodyItems/TableBodyItems.jsx';
+
+
 const TableBody = () => {
-	return (<table className="table fs-14">
-		<thead>
-		<tr>
-			<th>ID</th>
-			<th>дата</th>
-			<th>продукт</th>
-			<th>имя</th>
-			<th>email</th>
-			<th>телефон</th>
-			<th>статус</th>
-			<th></th>
-		</tr>
-		</thead>
-		<tbody id="tbody">
-		<tr>
-			<th scope="row">1</th>
-			<td>01.04.2020</td>
-			<td>Курс по верстке</td>
-			<td>Петр Сергеевич</td>
-			<td>info@inbox.ru</td>
-			<td>+7 (909) 77-55-777</td>
-			<td>
-				<div className="badge badge-pill badge-danger">
-					Новый
-				</div>
-			</td>
-			<td>
-				<a href="edit.html">Редактировать</a>
-			</td>
-		</tr>
-		<tr>
-			<th scope="row">2</th>
-			<td>01.04.2020</td>
-			<td>Курс по верстке</td>
-			<td>Василий Петрович</td>
-			<td>info@gmail.ru</td>
-			<td>+7 (909) 77-55-777</td>
-			<td>
-				<div className="badge badge-pill badge-warning">
-					В работе
-				</div>
-			</td>
-			<td>
-				<a href="edit.html">Редактировать</a>
-			</td>
-		</tr>
-		<tr>
-			<th scope="row">1</th>
-			<td>01.04.2020</td>
-			<td>Курс по верстке</td>
-			<td>Николай Владимирович</td>
-			<td>info@mail.ru</td>
-			<td>+7 (909) 77-55-777</td>
-			<td>
-				<div className="badge badge-pill badge-success">
-					Завершенный
-				</div>
-			</td>
-			<td>
-				<a href="edit.html">Редактировать</a>
-			</td>
-		</tr>
-		</tbody>
-	</table>);
-};
+
+		const { product, status, bids } = useContext(AppContext);
+
+		let arrBids = null;
+
+		if (bids) {
+			arrBids = bids.filter((item) => {
+				if (status !== 'all') {
+					return item.status === status && item;
+
+				}
+
+				return item;
+			});
+		}
+
+		if (arrBids) {
+			arrBids = arrBids.filter((item) => {
+				if (product !== 'all') {
+					return item.course === product && item;
+				}
+				return item;
+			});
+		}
+
+
+		const html = (arr) => {
+			return arr.map((bid) => {
+				return <TableBodyItems key={bid.id} bid={bid} />;
+			});
+		};
+
+		return (<table className="table fs-14">
+			<TableBodyHeader />
+			<tbody id="tbody">
+			{bids && html(arrBids)}
+			</tbody>
+		</table>);
+	}
+;
 export default TableBody;

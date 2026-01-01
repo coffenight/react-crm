@@ -1,29 +1,120 @@
-{  "bids": [
+{
+  "bids": [
     {
-      "id": 1767047573337.609,
+      "id": "1767047573337.609",
       "date": "30.12.2025",
       "course": "course-php",
+      "name": "Иван Хлобыстин",
+      "mail": "gdddgfdg@mail.ru",
+      "phone": "+78945624568",
+      "status": "inwork"
+    },
+    {
+      "id": "1767051253480.9963",
+      "date": "30.12.2025",
+      "course": "course-wordpress",
+      "name": "Владимир Овчинников",
+      "mail": "fddfdfdf@yandex.ru",
+      "phone": "+74596854245",
+      "status": "inwork"
+    },
+    {
+      "id": "1767052853436.4783",
+      "date": "30.12.2025",
+      "course": "course-js",
+      "name": "Олег",
+      "mail": "hz@gmail.com",
+      "phone": "+7977778856",
+      "status": "new"
+    },
+    {
+      "id": "1767265202916.9453",
+      "date": "01.01.2026",
+      "course": "course-html",
       "name": "Иван",
       "mail": "gdddgfdg@mail.ru",
       "phone": "+78945624568",
       "status": "new"
     },
     {
-      "id": 1767051253480.9963,
-      "date": "30.12.2025",
+      "id": "1767265203812.3677",
+      "date": "01.01.2026",
+      "course": "course-wordpress",
+      "name": "Евгений Каленский",
+      "mail": "sdcccvcv@rambler.ru",
+      "phone": "+78456987878",
+      "status": "inwork"
+    },
+    {
+      "id": "1767265204788.0308",
+      "date": "01.01.2026",
+      "course": "course-vue",
+      "name": "Евгений",
+      "mail": "sdcccvcv@rambler.ru",
+      "phone": "+78456987878",
+      "status": "new"
+    },
+    {
+      "id": "1767265206380.9346",
+      "date": "01.01.2026",
+      "course": "course-vue",
+      "name": "Евгений",
+      "mail": "sdcccvcv@rambler.ru",
+      "phone": "+78456987878",
+      "status": "inwork"
+    },
+    {
+      "id": "1767266731409.6692",
+      "date": "01.01.2026",
+      "course": "course-vue",
+      "name": "Евгений",
+      "mail": "sdcccvcv@rambler.ru",
+      "phone": "+78456987878",
+      "status": "complete"
+    },
+    {
+      "id": "1767266743297.5476",
+      "date": "01.01.2026",
       "course": "course-wordpress",
       "name": "Владимир",
       "mail": "fddfdfdf@yandex.ru",
       "phone": "+74596854245",
+      "status": "complete"
+    },
+    {
+      "id": "1767266745507.326",
+      "date": "01.01.2026",
+      "course": "course-html",
+      "name": "Иван",
+      "mail": "gdddgfdg@mail.ru",
+      "phone": "+78945624568",
       "status": "new"
     },
     {
-      "id": 1767052853436.4783,
-      "date": "30.12.2025",
-      "course": "course-js",
-      "name": "Олег",
-      "mail": "hz@gmail.com",
-      "phone": "+7977778856",
+      "id": "1767276091274.9238",
+      "date": "01.01.2026",
+      "course": "course-vue",
+      "name": "Евгений",
+      "mail": "sdcccvcv@rambler.ru",
+      "phone": "+78456987878",
+      "status": "new"
+    },
+    {
+      "id": "1767287784300.618",
+      "date": "01.01.2026",
+      "course": "course-wordpress",
+      "name": "Владимир Непонятный",
+      "mail": "fddfdfdf@yandex.ru",
+      "phone": "+74596854245",
+      "status": "complete"
+    },
+    {
+      "id": "1767287787508.9158",
+      "date": "01.01.2026",
+      "course": "course-wordpress",
+      "name": "Владимир",
+      "mail": "fddfdfdf@yandex.ru",
+      "phone": "+74596854245",
       "status": "new"
     }
   ]

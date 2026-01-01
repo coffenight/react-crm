@@ -194,6 +194,7 @@ body {
 	padding-bottom: 20px;
 }
 .form-wrapper {
+	margin-top: 70px;
 	max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
@@ -804,4 +805,44 @@ body.with-nav .left-panel {
 
 .add-form {
 	min-height: 100vh;
+}
+.table-id-header {
+position: relative;
+}
+.table-id {
+	display: inline-block;
+	width: 50px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.table-id-text {
+	display: none;
+	position: absolute;
+	top: -5px;
+	left: 0;
+	color: red;
+
+}
+.table-id-header:hover .table-id-text {
+	display: inline-block;
+}
+/*.table-id:hover {*/
+/*	display: inline-block;*/
+/*	width: 100%;*/
+/*	overflow: visible;*/
+/*	white-space: normal;*/
+/*	text-overflow: clip;*/
+/*}*/
+
+.left-status {
+	cursor: pointer;
+}
+
+.top-status {
+	cursor: pointer;
+}
+
+#productSelect {
+	cursor: pointer;
 }
