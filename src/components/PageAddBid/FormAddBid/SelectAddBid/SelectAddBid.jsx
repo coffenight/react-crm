@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { AppContext } from '../../PageAddBid';
-import { course as coursesList} from '../../../../helpers/variables.js';
+import { course as coursesList } from '../../../../helpers/variables.js';
 
 const SelectAddBid = () => {
 	const { course, setCourse } = useContext(AppContext);

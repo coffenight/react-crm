@@ -7,6 +7,6 @@ const LeftPanelHeader = () => {
 			</div>
 		</div>
 	);
-}
+};
 
 export default LeftPanelHeader;

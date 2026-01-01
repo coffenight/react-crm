@@ -1,4 +1,4 @@
-import LeftPanelList from "../LeftPanelList/LeftPanelList";
+import LeftPanelList from '../LeftPanelList/LeftPanelList';
 
 const LeftPanelNavigation = () => {
 	return (
@@ -7,6 +7,6 @@ const LeftPanelNavigation = () => {
 			<LeftPanelList />
 		</div>
 	);
-}
+};
 
 export default LeftPanelNavigation;

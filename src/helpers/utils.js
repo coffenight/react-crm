@@ -10,7 +10,7 @@ function createNewBid(course, name, mail, phone) {
 		name: name,
 		mail: mail,
 		phone: phone,
-		status:'new'
+		status: 'new',
 	};
 }
 

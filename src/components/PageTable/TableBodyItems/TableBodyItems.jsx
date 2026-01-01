@@ -1,53 +1,58 @@
 import { course, status } from '../../../helpers/variables.js';
 import { Link } from 'react-router-dom';
 
-const TableBodyItems = ({bid}) => {
-	const cours = ()=> {
-		return course.map((item)=>{
-			if(item.value === bid.course) {
-				return item.title
+const TableBodyItems = ({ bid }) => {
+	const cours = () => {
+		return course.map((item) => {
+			if (item.value === bid.course) {
+				return item.title;
 			}
-		})
-	}
+		});
+	};
 
-	const statusBid = ()=> {
-		return status.map((item)=>{
-			if(item.value === bid.status) {
-				return item.titleOne
+	const statusBid = () => {
+		return status.map((item) => {
+			if (item.value === bid.status) {
+				return item.titleOne;
 			}
-		})
-	}
+		});
+	};
 
 	const classBadge = (status) => {
-		 switch (status) {
+		switch (status) {
 			case 'all':
-				return 'badge badge-pill badge-danger'
+				return 'badge badge-pill badge-danger';
 			case 'inwork':
-				return 'badge badge-pill badge-warning'
+				return 'badge badge-pill badge-warning';
 			case 'new':
-				return 'badge badge-pill badge-danger'
+				return 'badge badge-pill badge-danger';
 			case 'complete':
-				return 'badge badge-pill badge-success'
+				return 'badge badge-pill badge-success';
 		}
-	}
+	};
 
-
-	return (<tr>
-		<th scope="row" className={'table-id-header'}> <span className={'table-id'}>{bid.id}</span><span className={'table-id-text'}>{bid.id}</span></th>
-		<td>{bid.date}</td>
-		<td>{cours()}</td>
-		<td>{bid.name}</td>
-		<td>{bid.mail}</td>
-		<td>{bid.phone}</td>
-		<td>
-			<div className={classBadge(bid.status)}>
-				{statusBid()}
-			</div>
-		</td>
-		<td>
-			<Link to={`/edit/${bid.id}`}><p >Редактировать</p></Link>
-		</td>
-	</tr>);
+	return (
+		<tr>
+			<th scope="row" className={'table-id-header'}>
+				{' '}
+				<span className={'table-id'}>{bid.id}</span>
+				<span className={'table-id-text'}>{bid.id}</span>
+			</th>
+			<td>{bid.date}</td>
+			<td>{cours()}</td>
+			<td>{bid.name}</td>
+			<td>{bid.mail}</td>
+			<td>{bid.phone}</td>
+			<td>
+				<div className={classBadge(bid.status)}>{statusBid()}</div>
+			</td>
+			<td>
+				<Link to={`/edit/${bid.id}`}>
+					<p>Редактировать</p>
+				</Link>
+			</td>
+		</tr>
+	);
 };
 export default TableBodyItems;
 

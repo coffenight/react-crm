@@ -10,6 +10,6 @@ const LeftPanelUser = () => {
 			</div>
 		</div>
 	);
-}
+};
 
 export default LeftPanelUser;

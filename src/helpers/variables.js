@@ -34,15 +34,10 @@ const course = [
 		value: 'course-php',
 	},
 	{
-		'id': 5,
-		'title': 'Курс по WordPress',
-		'value': 'course-wordpress',
-	}
+		id: 5,
+		title: 'Курс по WordPress',
+		value: 'course-wordpress',
+	},
 ];
 
-
-export {
-	serverPath,
-	status,
-	course
-};
+export { serverPath, status, course };

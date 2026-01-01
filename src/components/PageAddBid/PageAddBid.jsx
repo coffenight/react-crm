@@ -6,7 +6,6 @@ import { createNewBid } from '../../helpers/utils';
 import FormAddBid from './FormAddBid/FormAddBid';
 import PageAddBidHeader from './PageAddBidHeader/PageAddBidHeader';
 
-
 export const AppContext = createContext(null);
 
 const PageAddBid = () => {
@@ -17,15 +16,13 @@ const PageAddBid = () => {
 	const [isSending, setSending] = useState(false);
 	const navigate = useNavigate();
 
-	useEffect(()=>{
+	useEffect(() => {
 		const data = testDataFn();
 		setName(data.name);
 		setPhone(data.phone);
 		setMail(data.email);
 		setCourse(data.course);
-	}, [] )
-
-
+	}, []);
 
 	const addBid = (e) => {
 		e.preventDefault();
@@ -35,13 +32,12 @@ const PageAddBid = () => {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(data),
-		})
-			.then((res) => {
-				if (res.ok === true) {
-					navigate(0);
-					setSending(false);
-				}
-			})
+		}).then((res) => {
+			if (res.ok === true) {
+				navigate(0);
+				setSending(false);
+			}
+		});
 	};
 
 	return (
